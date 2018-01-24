@@ -1,7 +1,9 @@
-﻿using System;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using TodoPagoConnector;
+using TodoPagoConnector.Model;
 using TPUnitTest.Mock;
 using TPUnitTest.Mock.Data;
 
@@ -16,7 +18,7 @@ namespace TPUnitTest
             var headers = new Dictionary<String, String>();
             string authorization = "TODOPAGO ABCDEF1234567890";
             headers.Add("Authorization", authorization);
-            
+
             TodoPagoMockConnector restConnector = new TodoPagoMockConnector("https://developers.todopago.com.ar/t/1.1/api/", headers);
             restConnector.SetRequestResponse(PaymentMethodsDataProvider.GetDiscoverOkResponse());
             TPConnectorMock connector = new TPConnectorMock(TPConnector.developerEndpoint, headers, restConnector);
@@ -44,7 +46,7 @@ namespace TPUnitTest
             var headers = new Dictionary<String, String>();
             string authorization = "TODOPAGO ABCDEF1234567890";
             headers.Add("Authorization", authorization);
-            
+
             TodoPagoMockConnector restConnector = new TodoPagoMockConnector("https://developers.todopago.com.ar/t/1.1/api/", headers);
             restConnector.SetRequestResponse(PaymentMethodsDataProvider.GetDiscoverFailResponse());
             TPConnectorMock connector = new TPConnectorMock(TPConnector.developerEndpoint, headers, restConnector);
@@ -68,7 +70,7 @@ namespace TPUnitTest
             var headers = new Dictionary<String, String>();
             string authorization = "TODOPAGO ABCDEF1234567890";
             headers.Add("Authorization", authorization);
-            
+
             TodoPagoMockConnector restConnector = new TodoPagoMockConnector("https://developers.todopago.com.ar/t/1.1/api/", headers);
             restConnector.SetRequestResponse(PaymentMethodsDataProvider.GetAllPaymentMethodsOkResponse());
             TPConnectorMock connector = new TPConnectorMock(TPConnector.developerEndpoint, headers, restConnector);
@@ -92,13 +94,31 @@ namespace TPUnitTest
             Assert.AreEqual(true, paymentMethods.ContainsKey("BanksCollection"));
         }
 
+        public void GetAllPaymentMethodsJSONOkTest()
+        {
+            var headers = new Dictionary<String, String>();
+            string authorization = "TODOPAGO ABCDEF1234567890";
+            headers.Add("Authorization", authorization);
+
+            TodoPagoMockConnector restConnector = new TodoPagoMockConnector("https://developers.todopago.com.ar/t/1.1/api/", headers);
+            restConnector.SetRequestResponse(PaymentMethodsDataProvider.GetAllPaymentMethodsOkResponse());
+            TPConnectorMock connector = new TPConnectorMock(TPConnector.developerEndpoint, headers, restConnector);
+
+            var response = connector.GetAllPaymentMethodsAsJSON("35");
+            response = response.Replace("\"@xmlns\":\"http://api.todopago.com.ar\",", "");
+
+            var results = JsonConvert.DeserializeObject<TodoPagoResult>(response);
+
+            Assert.AreEqual(true, results.Result.PaymentMethodsCollection.PaymentMethod.Count > 0);
+        }
+
         [TestMethod]
         public void GetAllPaymentMethodsFailTest()
         {
             var headers = new Dictionary<String, String>();
             string authorization = "TODOPAGO ABCDEF1234567890";
             headers.Add("Authorization", authorization);
-            
+
             TodoPagoMockConnector restConnector = new TodoPagoMockConnector("https://developers.todopago.com.ar/t/1.1/api/", headers);
             restConnector.SetRequestResponse(null);
             TPConnectorMock connector = new TPConnectorMock(TPConnector.developerEndpoint, headers, restConnector);
@@ -108,6 +128,27 @@ namespace TPUnitTest
             Assert.AreNotEqual(null, response);
 
             Assert.AreEqual(true, response.Count == 0);
+        }
+
+        [TestMethod]
+        public void GetAllPaymentMethodsJSONFailTest()
+        {
+            var headers = new Dictionary<String, String>();
+            string authorization = "TODOPAGO ABCDEF1234567890";
+            headers.Add("Authorization", authorization);
+
+            TodoPagoMockConnector restConnector = new TodoPagoMockConnector("https://developers.todopago.com.ar/t/1.1/api/", headers);
+            restConnector.SetRequestResponse(null);
+            TPConnectorMock connector = new TPConnectorMock(TPConnector.developerEndpoint, headers, restConnector);
+
+            var response = connector.GetAllPaymentMethodsAsJSON("35");
+            response = response.Replace("\"@xmlns\":\"http://api.todopago.com.ar\",", "");
+
+            var results = JsonConvert.DeserializeObject<TodoPagoResult>(response);
+
+            Assert.AreNotEqual(null, response);
+
+            Assert.AreEqual(null, results.Result);
         }
     }
 }

@@ -1,0 +1,11 @@
+C:\Users\Martín Fernández\Source\Repos\SDK-.NET\Solution\TPUnitTest\bin\Debug\TPUnitTest.dll
+C:\Users\Martín Fernández\Source\Repos\SDK-.NET\Solution\TPUnitTest\bin\Debug\TPUnitTest.pdb
+C:\Users\Martín Fernández\Source\Repos\SDK-.NET\Solution\TPUnitTest\bin\Debug\TodoPagoConnector.dll
+C:\Users\Martín Fernández\Source\Repos\SDK-.NET\Solution\TPUnitTest\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Martín Fernández\Source\Repos\SDK-.NET\Solution\TPUnitTest\bin\Debug\TodoPagoConnector.pdb
+C:\Users\Martín Fernández\Source\Repos\SDK-.NET\Solution\TPUnitTest\bin\Debug\TodoPagoConnector.dll.config
+C:\Users\Martín Fernández\Source\Repos\SDK-.NET\Solution\TPUnitTest\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Martín Fernández\Source\Repos\SDK-.NET\Solution\TPUnitTest\obj\Debug\TPUnitTest.csprojResolveAssemblyReference.cache
+C:\Users\Martín Fernández\Source\Repos\SDK-.NET\Solution\TPUnitTest\obj\Debug\TPUnitTest.csproj.CoreCompileInputs.cache
+C:\Users\Martín Fernández\Source\Repos\SDK-.NET\Solution\TPUnitTest\obj\Debug\TPUnitTest.dll
+C:\Users\Martín Fernández\Source\Repos\SDK-.NET\Solution\TPUnitTest\obj\Debug\TPUnitTest.pdb

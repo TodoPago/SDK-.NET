@@ -1,13 +1,13 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Net;
 using System.Xml;
-using System.IO;
-using Newtonsoft.Json;
-using TodoPagoConnector.Model;
 using TodoPagoConnector.Exceptions;
-using TodoPagoConnector.Utils;
+using TodoPagoConnector.Model;
 using TodoPagoConnector.Operations;
+using TodoPagoConnector.Utils;
 
 namespace TodoPagoConnector
 {
@@ -109,6 +109,23 @@ namespace TodoPagoConnector
                 Console.WriteLine(ex.Message);
             }
             return toDictionary(xd);
+        }
+
+        public string GetAllPaymentMethodsAsJSON(string merchant)
+        {
+            string url = endpoint + PAYMENT_METHODS_GET + "/MERCHANT/" + merchant;
+
+            var res = ExecuteRequest(null, url, METHOD_GET, true);
+            XmlDocument doc = new XmlDocument();
+            try
+            {
+                doc.LoadXml(res);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            return JsonConvert.SerializeXmlNode(doc);
         }
 
         public Dictionary<string, object> GetByRangeDateTime(Dictionary<string, string> param)
