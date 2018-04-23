@@ -32,9 +32,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.6.0.8\lib\net35\Newtonsoft.Json.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net35\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -54,6 +53,18 @@
     <Compile Include="Exceptions\EmptyFieldPassException.cs" />
     <Compile Include="Exceptions\EmptyFieldUserException.cs" />
     <Compile Include="Exceptions\ResponseException.cs" />
+    <Compile Include="Model\AuthorizationResult.cs" />
+    <Compile Include="Model\Bank.cs" />
+    <Compile Include="Model\BanksCollection.cs" />
+    <Compile Include="Model\Currency.cs" />
+    <Compile Include="Model\PaymentMethod.cs" />
+    <Compile Include="Model\PaymentMethodBank.cs" />
+    <Compile Include="Model\PaymentMethodBanksCollection.cs" />
+    <Compile Include="Model\PaymentMethodsBSA.cs" />
+    <Compile Include="Model\PaymentMethodsCollection.cs" />
+    <Compile Include="Model\Result.cs" />
+    <Compile Include="Model\TodoPagoResult.cs" />
+    <Compile Include="Model\TransactionBSA.cs" />
     <Compile Include="Model\User.cs" />
     <Compile Include="Operations\CredentialsValidate.cs" />
     <Compile Include="Operations\FraudControlValidate.cs" />

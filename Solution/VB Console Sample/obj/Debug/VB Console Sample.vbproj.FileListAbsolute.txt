@@ -12,3 +12,19 @@ C:\Users\juan.peregrina\Source\Repos\dev-SDK-.Net\Solution\VB Console Sample\obj
 C:\Users\juan.peregrina\Source\Repos\dev-SDK-.Net\Solution\VB Console Sample\obj\Debug\VB Console Sample.exe
 C:\Users\juan.peregrina\Source\Repos\dev-SDK-.Net\Solution\VB Console Sample\obj\Debug\VB Console Sample.xml
 C:\Users\juan.peregrina\Source\Repos\dev-SDK-.Net\Solution\VB Console Sample\obj\Debug\VB Console Sample.pdb
+C:\Users\Martín Fernández\Source\Repos\SDK-.NET\Solution\VB Console Sample\bin\Debug\VB Console Sample.exe.config
+C:\Users\Martín Fernández\Source\Repos\SDK-.NET\Solution\VB Console Sample\bin\Debug\VB Console Sample.exe
+C:\Users\Martín Fernández\Source\Repos\SDK-.NET\Solution\VB Console Sample\bin\Debug\VB Console Sample.pdb
+C:\Users\Martín Fernández\Source\Repos\SDK-.NET\Solution\VB Console Sample\bin\Debug\VB Console Sample.xml
+C:\Users\Martín Fernández\Source\Repos\SDK-.NET\Solution\VB Console Sample\bin\Debug\TodoPagoConnector.dll
+C:\Users\Martín Fernández\Source\Repos\SDK-.NET\Solution\VB Console Sample\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Martín Fernández\Source\Repos\SDK-.NET\Solution\VB Console Sample\bin\Debug\TodoPagoConnector.pdb
+C:\Users\Martín Fernández\Source\Repos\SDK-.NET\Solution\VB Console Sample\bin\Debug\TodoPagoConnector.dll.config
+C:\Users\Martín Fernández\Source\Repos\SDK-.NET\Solution\VB Console Sample\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Martín Fernández\Source\Repos\SDK-.NET\Solution\VB Console Sample\obj\Debug\VB Console Sample.vbprojResolveAssemblyReference.cache
+C:\Users\Martín Fernández\Source\Repos\SDK-.NET\Solution\VB Console Sample\obj\Debug\VB_Console_Sample.Resources.resources
+C:\Users\Martín Fernández\Source\Repos\SDK-.NET\Solution\VB Console Sample\obj\Debug\VB Console Sample.vbproj.GenerateResource.Cache
+C:\Users\Martín Fernández\Source\Repos\SDK-.NET\Solution\VB Console Sample\obj\Debug\VB Console Sample.vbproj.CoreCompileInputs.cache
+C:\Users\Martín Fernández\Source\Repos\SDK-.NET\Solution\VB Console Sample\obj\Debug\VB Console Sample.exe
+C:\Users\Martín Fernández\Source\Repos\SDK-.NET\Solution\VB Console Sample\obj\Debug\VB Console Sample.xml
+C:\Users\Martín Fernández\Source\Repos\SDK-.NET\Solution\VB Console Sample\obj\Debug\VB Console Sample.pdb

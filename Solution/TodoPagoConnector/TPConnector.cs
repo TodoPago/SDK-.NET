@@ -130,6 +130,10 @@ namespace TodoPagoConnector
             return todoPagoClient.GetAllPaymentMethods(merchant);
         }
 
+        public string GetAllPaymentMethodsAsJSON(string merchant)
+        {
+            return todoPagoClient.GetAllPaymentMethodsAsJSON(merchant);
+        }
         public Dictionary<string, object> VoidRequest(Dictionary<string, string> param)
         {
             return todoPagoClient.VoidRequest(param);

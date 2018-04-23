@@ -7,3 +7,5 @@ Solution/WindowsFormsApplication1/obj
 Solution/.vs/TodoPagoConnector/v14/.suo
 Solution/TodoPagoConnector.v12.suo
 Solution/VB Console Sample/obj/Release/DesignTimeResolveAssemblyReferencesInput.cache
+/.vs
+/Solution/.vs
